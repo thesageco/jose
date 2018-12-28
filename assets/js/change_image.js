@@ -9,8 +9,10 @@ function changeImage(){
 function loadImages(){
 for(var i = 0; i < MAX_IMAGES; i+=1){
   var Image = document.createElement("img")
-  Image.src = "../assets/images/" + String(i) + ".jpg"
-  Image.className = "d-none"
+  Image.src = "../assets/images/" + String(i) + ".jpg";
+  // Image.className = "d-none"
+  Image.width = 0;
+  Image.height = 0;
   document.body.appendChild(Image);
 }
 }
