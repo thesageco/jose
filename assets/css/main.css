@@ -52,8 +52,8 @@ img {
 }
 
 .page {
-  font-weight: lighter;
-  letter-spacing: 1vw;
+  font-weight: lighter !important;
+  letter-spacing: 0.8vw;
   color: LightGray;
 }
 
