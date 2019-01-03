@@ -1,4 +1,4 @@
-const MAX_IMAGES = 6;
+const MAX_IMAGES = 22+1;
 var current_IMAGE = 0;
 
 function prefetch(){
