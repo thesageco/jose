@@ -3,6 +3,7 @@ var current_IMAGE = 0;
 
 function prefetch(){
   // pre load all the images
+  document.onclick = function(e) {whitespaceClick(e)};
   for(var i = current_IMAGE + 1; i < MAX_IMAGES; i+=1){
     var Image = document.createElement("img")
     Image.src = "../assets/images/" + String(i) + ".jpg";
@@ -16,4 +17,10 @@ function prefetch(){
 function changeImage(){
   current_IMAGE = (current_IMAGE+1)%MAX_IMAGES;
   document.getElementById("changing").src="../assets/images/" + String(current_IMAGE) + ".jpg";
+}
+
+function whitespaceClick(e){
+    if (e.target.tagName !== "P" && e.target.id !== "name" ) {
+        changeImage();
+    }
 }

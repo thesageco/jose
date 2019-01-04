@@ -14,7 +14,8 @@ html, body {
 }
 
 #name {
-  font-weight: lighter !important;
+  /* font-weight: lighter !important; */
+  color: LightGray;
   letter-spacing: 2vw;
   padding-top: 10%;
 }
@@ -45,7 +46,7 @@ img {
 }
 
 .darkgray {
-  color: #696969;
+  color: #C0C0C0;
 }
 
 .gray {
@@ -53,9 +54,9 @@ img {
 }
 
 .page {
-  font-weight: lighter !important;
+  /* font-weight: lighter !important; */
   letter-spacing: 0.8vw;
-  color: #696969;
+  color: #C0C0C0;
 }
 
 .page.active {
