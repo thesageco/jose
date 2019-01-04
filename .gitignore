@@ -39,3 +39,5 @@ Thumbs.db
 # Project Specific #
 ####################
 wireframes
+assets/fonts/AvenirNext-*
+!assets/fonts/AvenirNext-Regular-08.ttf
