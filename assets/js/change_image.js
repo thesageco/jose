@@ -11,9 +11,13 @@ const IMAGE_INFO = [
   "One<br>Relief monotype print on cotton wove paper, 40x40 in.",
   "Two<br>Relief monotype print on cotton wove paper, 40x40 in."
 ];
-var current_IMAGE = 0;
+var current_IMAGE = -1;
 
-function prefetch(){
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function prefetch(){
   // pre load all the images
   document.onclick = function(e) {whitespaceClick(e)};
   for(var i = current_IMAGE + 1; i < MAX_IMAGES; i+=1){

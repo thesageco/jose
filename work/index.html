@@ -32,8 +32,18 @@
     </div>
     <div class="row content">
       <div class="img-capped col-sm-12 col-md-12 text-center">
-        <img id="changing" src="../assets/images/0.jpg" class="rounded col-sm-8">
-        <p id="caption" class="darkgray">Eres - Acrylic on canvas 5x5 ft</p>
+        <img id="changing" src="../assets/images/-1.png" class="rounded col-sm-8">
+        <p id="caption" class="darkgray"></p>
+        <script>
+        if (typeof(Storage) !== "undefined") {
+          if (localStorage.getItem("instruction")){
+            changeImage();
+          } else {
+            localStorage.setItem("instruction", "seen");
+            setTimeout(function(){changeImage();}, 2000);
+          }
+        }
+        </script>
       </div>
     </div>
     <div class="footer row text-center">
