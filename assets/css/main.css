@@ -45,7 +45,7 @@ img {
 #caption {
   max-width: 100%;
   word-wrap: break-word;
-  font-size: 1em;
+  font-size: 2vh;
 }
 
 .darkgray {
