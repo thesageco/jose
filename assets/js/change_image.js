@@ -20,13 +20,16 @@ function sleep(ms) {
 async function prefetch(){
   // pre load all the images
   document.onclick = function(e) {whitespaceClick(e)};
-  for(var i = current_IMAGE + 1; i < MAX_IMAGES; i+=1){
+  for(var i = current_IMAGE+1; i < MAX_IMAGES; i+=1){
     var Image = document.createElement("img")
     Image.src = "../assets/images/" + String(i) + ".jpg";
     // Image.className = "d-none"
     Image.width = 0;
     Image.height = 0;
     document.body.appendChild(Image);
+  }
+  if(window.navigator.userAgent.includes("iPhone")){
+    iPhoneChange();
   }
 }
 
@@ -40,4 +43,11 @@ function whitespaceClick(e){
     if (e.target.tagName !== "P" && e.target.id !== "name" ) {
         changeImage();
     }
+}
+
+async function iPhoneChange(){
+  while(true){
+    await sleep(4000);
+    changeImage();
+  }
 }
