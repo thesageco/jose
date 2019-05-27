@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang='en'>
   <head>
     <title>Jos&#233; Taymani</title>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -22,31 +22,18 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Martel:600|Rubik">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="../assets/js/change_image.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    686868<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </head>
   <body class="container" onload="prefetch()">
-    <div class="row">
-      <p id="name" class="h1 gray col-sm-12 col-md-12 text-center">JOS&#201;TAYMANI</p>
-    </div>
-    <div class="row content">
-      <div class="img-capped col-sm-12 col-md-12 text-center">
-        <img id="changing" src="../assets/images/-1.png" class="rounded col-sm-8">
-        <p id="caption" class="darkgray"></p>
-        <script>
-        if (typeof(Storage) !== "undefined") {
-          if (localStorage.getItem("instruction")){
-            changeImage();
-          } else {
-            localStorage.setItem("instruction", "seen");
-            setTimeout(function(){changeImage();}, 2000);
-          }
-        }
-        </script>
+    <header>
+      <div class="row">
+        <p id="name" class="h1 gray col-sm-12 col-md-12 text-center">JOS&#201;TAYMANI</p>
       </div>
-    </div>
-    <div class="footer row text-center">
+    </header>
+    <nav>
+      <div class="footer row text-center">
       <div class="col-12 col-md-4">
         <a href="../bio" class="gray subpage-link">
           <p class="page h2">
@@ -69,5 +56,24 @@
         </a>
       </div>
     </div>
+    </nav>
+    <main>
+      <div class="row content">
+        <div class="img-capped col-sm-12 col-md-12 text-center">
+          <img id="changing" src="../assets/images/-1.png" class="rounded col-sm-8">
+          <p id="caption" class="darkgray"></p>
+          <script>
+          if (typeof(Storage) !== "undefined") {
+            if (localStorage.getItem("instruction")){
+              changeImage();
+            } else {
+              localStorage.setItem("instruction", "seen");
+              setTimeout(function(){changeImage();}, 2000);
+            }
+          }
+          </script>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
