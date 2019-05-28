@@ -38,9 +38,12 @@ async function prefetch(){
 
 function changeImage(){
   current_IMAGE = (current_IMAGE+1)%MAX_IMAGES;
+  var img = document.getElementById("changing");
   document.getElementById("changing").src="../assets/images/" + String(current_IMAGE) + ".jpg";
-  document.getElementById("changing").alt=IMAGE_INFO[current_IMAGE];
-  document.getElementById("caption").innerHTML = IMAGE_INFO[current_IMAGE];
+  img.onload = function(){
+    document.getElementById("changing").alt=IMAGE_INFO[current_IMAGE];
+    document.getElementById("caption").innerHTML = IMAGE_INFO[current_IMAGE];
+  }
 }
 
 function whitespaceClick(e){
